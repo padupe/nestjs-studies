@@ -58,3 +58,12 @@ nest g controller {name-controller}
   ```bash
   nest g controller {directory}/{name-controller} --dry-run
   ```
+
+- 5 Para criar um _service_
+```bash
+nest generate service {name-service}
+```
+ou
+```bash
+nest g service {name-service}
+```
