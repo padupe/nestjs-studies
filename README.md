@@ -67,3 +67,25 @@ ou
 ```bash
 nest g service {name-service}
 ```
+
+6 - Para criar uma Classe
+> Você pode criar a Classe e os diretórios em um único comando
+
+```bash
+nest generate class {path-to-file}
+
+# nest generate class courses/dto/create-course.dto
+```
+ou
+```bash
+nest g class {path-t-file}
+
+# nest g class courses/dto/create-course.dto
+```
+
+  - 6.1 Para criar uma classe sem o arquivo de teste
+  ```bash
+  nest generate class {path-to-file} --no-spec
+
+  # nest g class courses/dto/create-course.dto --no-spec
+  ```

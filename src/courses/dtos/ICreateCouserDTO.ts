@@ -1,6 +1,6 @@
 export interface ICreateCourseDTO {
-    id?: number
-    name: string
-    description: string
-    tags: string[]
+    readonly id?: number
+    readonly name: string
+    readonly description: string
+    readonly tags: string[]
 }

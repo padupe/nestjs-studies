@@ -8,6 +8,8 @@ import {
     Post,
 } from '@nestjs/common'
 import { CoursesService } from './courses.service'
+import { ICreateCourseDTO } from './dtos/ICreateCouserDTO'
+import { IUpdateCourseDTO } from './dtos/IUpdateCourseDTO'
 
 @Controller('courses')
 export class CoursesController {
@@ -36,13 +38,13 @@ export class CoursesController {
 
     // Dados enviados no corpo da requisição, ou seja, o body.
     @Post()
-    create(@Body('name') body) {
-        return this.coursesService.create(body)
+    create(@Body('name') createCourseDTO: ICreateCourseDTO) {
+        return this.coursesService.create(createCourseDTO)
     }
 
     @Patch(':id')
-    update(@Param('id') id: string, @Body() body) {
-        return this.coursesService.update(id, body)
+    update(@Param('id') id: string, @Body() updateCourseDTO: IUpdateCourseDTO) {
+        return this.coursesService.update(id, updateCourseDTO)
     }
     /*
         Mesma rota utilizando desestruturação
